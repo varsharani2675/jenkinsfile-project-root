@@ -8,11 +8,12 @@ terraform {
     }
   }
 
+ 
   backend "s3" {
-    bucket         = "young-minds-app-terraform-state"
-    region         = "us-east-1"
-    key            = "batch-32/terraform.tfstate"
-    encrypt        = true
+    bucket = "s3-app-terraform-state"
+    region = "us-east-1"
+    key = "jenkins-project/terraform.tfstate"
+    encrypt = true
     dynamodb_table = "terraform-locks"
   }
 }
