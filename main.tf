@@ -54,7 +54,7 @@ module "ec2_instances" {
 
 # ── S3 Bucket ─────────────────────────────────────────────────────────
 module "s3_bucket" {
-  source = "git::https://github.com/YoungMinds2024/terraform-module-s3.git"
+  source = "git::https://github.com/varsharani2675/Terraform-Module-s3.git"
 
   bucket_name = "${local.name_prefix}-${var.bucket_suffix}"
   environment = var.environment
